@@ -70,21 +70,53 @@ function showTenPage(list, page) {
    functionality to the pagination buttons.
 ***/
 //use the appendPageLinks FUnction in the study guide--it builds the code
-function appendPageLinks(list){
-    const totalPages = math.floor(list.length / tenStudents); //total pages
+//divide total # list items by max number of items per page
+    //.length is going to be used and ceiling to round up from the max
+    //let totalpage.length /
+function appendPageLinks(list) {
+    const totalPages = math.ceil(list.length / tenStudents); //total pages
     //create div; exmaples in video "filter invite who have not responded"; personal notes #7
     const div = document.createElement('div');
-    div.className = 'pagination';
+    div.className = 'pagination'; //<div class="pagination"> HTML line 119
     const classDivPage = document.querySelector('.page'); //.page denotes a class element is being referenced/appended 
-    classDivPage.appendChild(div)
-    
-    //<div class="pagination"> HTML line 119
-    //divide total # list items by max number of items per page
-    //.length is going to be used and floor to round down from the max
-    //let totalpage.length /
+    classDivPage.appendChild(div);
 
+    //add a ul to the pagination div created to store the pagonation links
+    const ulPaginated = documents.createElement('ul');
+    div.appendChild(ulPaginated);
+    
+    //create a for loop to add li and a tags to each page
+    //is abouve on line 77--const totalPages = math/ceil (list.length / tenStudents);
+    for (let i = 1; i <= totalPages; i++) {
+        //add li to the ul--pay attention to nesting
+        const li = document.createElement('li');
+        ulPaginated.appendChild(li);
+        //add a tag to the li-pay attention to nesting
+        const a = document.createElement('a');
+        li.appendChild(a);
+
+        //Each LI element should contain an A element with an href attribute of #, and text set to the page number each link will show. First link is 1. Second link is 2. And so on.
+        const aFirst = document.querySelector('a');
+        a.href = "#";
+        a.textContent = i; //i=1 //use node.tetcontent
+        aFirst.clalssName - 'active';
+
+        const aFollowing =  document.querySelectorAll('a');
+         //Add an event listener to each a tag.
+        for (let j = 1; j <= aFollowing.length; j++) {
+            aFollowing.addEventListener('click', (event) =>{
+            showTenPage(list, j);
+                for (let K = 0; k < aFollowing.length; K++) {
+                    aFollowing[k].className = '';
+                }
+                event.target.className = 'active'; 
+    });
 }
-//StudentList.appendchild(StudentItem);
+    }
+}
+//call the 2 functions
+showTenPage(studentList, 1);
+appendPageLinks(studentList);
 
 
 
