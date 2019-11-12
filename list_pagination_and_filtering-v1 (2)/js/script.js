@@ -113,7 +113,7 @@ function appendPageLinks(list) {
 }
     }
 }
-//call the 2 functions
+//call the functions
 showTenPage(studentList, 1);
 appendPageLinks(studentList);
 
