@@ -18,9 +18,9 @@ FSJS project 2 - List Filter and Pagination
 ***/
 //Create global variables that reference the student list and will be used for functions//
 //Targets the UL class element Student list
-const ulStudentList = document.getElementsByClassName ('student-list');
+const StudentList = document.getElementsByClassName ('student-list');
 //Now I want to create a variable that target for all children of the class 'student-list' 
-const liStudentItem = ulStudentList.Chilldren;
+const StudentItem = StudentList.Chilldren;
 //create a variable that designates 10 students per page
 const tenStudents = 10;
 //Dev Tools don't seem to pinpoint any issues with code above. Moving to creating a function.
@@ -42,7 +42,7 @@ const tenStudents = 10;
        "invoke" the function 
 ***/
 //Function that shows 10 students a page with 2 parameters passed in.
-function showTenPage (list, page) {
+function showTenPage(list, page) {
     let startIndex = (page * tenStudents) - tenStudents; //Display a "page" gives math//
     let endIndex = page * tenStudents;
     //Now create a for loop as project notes suggests to loop over list parameters
@@ -70,12 +70,21 @@ function showTenPage (list, page) {
    functionality to the pagination buttons.
 ***/
 //use the appendPageLinks FUnction in the study guide--it builds the code
-const appendPageLinks = (list) => {
+function appendPageLinks(list){
+    const totalPages = math.floor(list.length / tenStudents); //total pages
+    //create div; exmaples in video "filter invite who have not responded"; personal notes #7
+    const div = document.createElement('div');
+    div.className = 'pagination';
+    const classDivPage = document.querySelector('.page'); //.page denotes a class element is being referenced/appended 
+    classDivPage.appendChild(div)
+    
+    //<div class="pagination"> HTML line 119
     //divide total # list items by max number of items per page
     //.length is going to be used and floor to round down from the max
     //let totalpage.length /
 
 }
+//StudentList.appendchild(StudentItem);
 
 
 
