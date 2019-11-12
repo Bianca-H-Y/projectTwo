@@ -43,23 +43,24 @@ const tenStudents = 10;
 ***/
 //Function that shows 10 students a page with 2 parameters passed in.
 function showTenPage (list, page) {
-    startIndex = (page * tenStudents) - tenStudents; //Display a "page" gives math//
-    endIndex = page * tenStudents;
+    let startIndex = (page * tenStudents) - tenStudents; //Display a "page" gives math//
+    let endIndex = page * tenStudents;
     //Now create a for loop as project notes suggests to loop over list parameters
     for (let i = 0; i < list.length; i++) { //pulled a error = missing
         //&& is a boolean operator it mean both statements must be true
-        if( i >= startIndex && i <= endIndex) //this make the program stop at 10
-    } 
+        if( i >= startIndex && i <= endIndex){ //this make the program stop at 10
+            list.style.display = '';
+        } else { //corected tabs and missing let
 /***Because we need to hide the info not being displayed we need to continue 
  * into a else statement--meaning that student lying outside the if coding
  * need to be cotrolled with the else staement: if not display, else hide.
  * style display--we can't use jQuery but MDN element target style.display 
  * is functionally the same***/
-    else  {
         list.style.display = 'none'; 
         //wasn't getting errors but reallized test file wasn't attached to HTML--testing now
     }
 }
+}//error where coming from missing closing curly brace.
 
 //Function for navigation buttons
 
