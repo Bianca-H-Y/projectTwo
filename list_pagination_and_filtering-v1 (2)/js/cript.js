@@ -62,13 +62,20 @@ function showTenPage (list, page) {
 }
 }//error where coming from missing closing curly brace.
 
+
 //Function for navigation buttons
 
 /*** 
    Create the `appendPageLinks function` to generate, append, and add 
    functionality to the pagination buttons.
 ***/
+//use the appendPageLinks FUnction in the study guide--it builds the code
+const appendPageLinks = (list) => {
+    //divide total # list items by max number of items per page
+    //.length is going to be used and floor to round down from the max
+    //let totalpage.length /
 
+}
 
 
 
