@@ -106,7 +106,7 @@ function appendPageLinks(list) {
         for (let j = 1; j <= aFollowing.length; j++) { 
         a.addEventListener('click', (event) =>{
             showTenPage(list, j);
-                for (let K = 1; k <= aFollowing.length; K++) {
+                for (let k = 1; k <= aFollowing.length; k++) {
                     aFollowing[k].className = '';
                 }
                 event.target.className = 'active'; 
