@@ -18,7 +18,8 @@ FSJS project 2 - List Filter and Pagination
 ***/
 //Create global variables that reference the student list and will be used for functions//
 //Targets the UL class element Student list
-const studentList = document.querySelectorAll('.student-list');
+const studentList = document.querySelectorAll('.student-item');
+//correctly targeting the student-items
 //Now I want to create a variable that target for all children of the class 'student-list' 
 //create a variable that designates 10 students per page
 const tenStudents = 10;
