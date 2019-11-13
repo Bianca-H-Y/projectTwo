@@ -74,7 +74,7 @@ function showTenPage(list, page) {
     //.length is going to be used and ceiling to round up from the max
     //let totalpage.length /
 function appendPageLinks(list) {
-    const totalPages = Math.ceil(list.length / tenStudents); //total pages
+    const totalPages = Math.floor(list.length / tenStudents); //total pages
     //create div; exmaples in video "filter invite who have not responded"; personal notes #7
     const div = document.createElement('div');
     div.className = 'pagination'; //<div class="pagination"> HTML line 119
@@ -103,10 +103,10 @@ function appendPageLinks(list) {
 
         const aFollowing =  document.querySelectorAll('a');
          //Add an event listener to each a tag.
-        for (let j = 1; j <= aFollowing.length; j++) {
+        for (let j = 1; j <= aFollowing.length; j++) { 
         a.addEventListener('click', (event) =>{
             showTenPage(list, j);
-                for (let K = 0; k < aFollowing.length; K++) {
+                for (let K = 1; k <= aFollowing.length; K++) {
                     aFollowing[k].className = '';
                 }
                 event.target.className = 'active'; 
