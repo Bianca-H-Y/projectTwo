@@ -48,7 +48,7 @@ function showTenPage(list, page) {
     //Now create a for loop as project notes suggests to loop over list parameters
     for (let i = 0; i < list.length; i++) { //pulled a error = missing
         //&& is a boolean operator it mean both statements must be true
-        if( i >= startIndex && i <= endIndex){ //this make the program stop at 10
+        if( i >= startIndex && i < endIndex){ //this make the program stop at 10
             list[i].style.display = 'block'; //error needed to add block
         } else { //corected tabs and missing let
 /***Because we need to hide the info not being displayed we need to continue 
@@ -107,7 +107,7 @@ function appendPageLinks(list) {
         a.addEventListener('click', (event) =>{
             showTenPage(list, j);
                 for (let k = 1; k <= aFollowing.length; k++) {
-                    aFollowing[k].className = '';
+                    aFollowing.className = 'none';
                 }
                 event.target.className = 'active'; 
     });
