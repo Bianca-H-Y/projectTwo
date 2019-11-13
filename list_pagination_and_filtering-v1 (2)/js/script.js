@@ -56,7 +56,7 @@ function showTenPage(list, page) {
  * need to be cotrolled with the else staement: if not display, else hide.
  * style display--we can't use jQuery but MDN element target style.display 
  * is functionally the same***/
-        list.style.display = 'none'; 
+        list[i].style.display = 'none'; //missing array list item
         //wasn't getting errors but reallized test file wasn't attached to HTML--testing now
     }
 }
