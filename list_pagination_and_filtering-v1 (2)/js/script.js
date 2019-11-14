@@ -99,7 +99,7 @@ function appendPageLinks(list) {
         const aFirst = document.querySelector('a');
         a.href = "#";
         a.textContent = i; //i=1 //use node.tetcontent
-        aFirst.className - 'active';
+        aFirst.className = 'active';
 
         const aFollowing =  document.querySelectorAll('a');
          //Add an event listener to each a tag.
