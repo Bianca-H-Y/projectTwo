@@ -74,7 +74,7 @@ function showTenPage(list, page) {
     //.length is going to be used and ceiling to round up from the max
     //let totalpage.length /
 function appendPageLinks(list) {
-    const totalPages = Math.cieling(list.length / tenStudents); //total pages
+    const totalPages = Math.ceil(list.length / tenStudents); //total pages
     //create div; exmaples in video "filter invite who have not responded"; personal notes #7
     const div = document.createElement('div');
     div.className = 'pagination'; //<div class="pagination"> HTML line 119
